@@ -29,17 +29,14 @@ public class Main {
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
         int min = arr[0];
-        for (int i = 1; i < 30; i++){
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++){
             if (arr[i] < min)
                 min = arr[i];
+            if (arr[i] > max)
+                max = arr[i];
             }
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей.");
-
-        int max = arr[0];
-        for (int i : arr) {
-            if (i > max)
-                max = i;
-    }
         System.out.println("Максимальная сумма трат за день составила " + max + " рублей.");
     }
     public static void task3() {
